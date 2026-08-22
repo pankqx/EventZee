@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/background">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="56dp"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:background="@color/white" android:paddingStart="16dp" android:paddingEnd="16dp">
+        <ImageView android:layout_width="24dp" android:layout_height="24dp"
+            android:src="@drawable/ic_arrow_back" android:tint="@color/text_primary"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="My Tickets" android:textSize="18sp"
+            android:textStyle="bold" android:textColor="@color/text_primary"
+            android:gravity="center"/>
+        <ImageView android:layout_width="24dp" android:layout_height="24dp"
+            android:src="@drawable/ic_search" android:tint="@color/text_primary"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+        android:orientation="horizontal" android:background="@color/white">
+        <TextView android:id="@+id/tabUpcoming"
+            android:layout_width="wrap_content" android:layout_height="match_parent"
+            android:text="Upcoming" android:textSize="14sp" android:textStyle="bold"
+            android:textColor="@color/primary_dark" android:gravity="center"
+            android:paddingStart="20dp" android:paddingEnd="20dp"/>
+        <TextView android:id="@+id/tabPast"
+            android:layout_width="wrap_content" android:layout_height="match_parent"
+            android:text="Past Events" android:textSize="14sp"
+            android:textColor="@color/text_secondary" android:gravity="center"
+            android:paddingStart="16dp" android:paddingEnd="16dp"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTickets"
+        android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:padding="16dp" android:clipToPadding="false"/>
+
+    <!-- Bottom Nav -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="64dp"
+        android:orientation="horizontal" android:background="@color/white" android:elevation="8dp">
+        <LinearLayout android:id="@+id/btnNavEvents" android:layout_width="0dp"
+            android:layout_height="match_parent" android:layout_weight="1"
+            android:orientation="vertical" android:gravity="center">
+            <ImageView android:layout_width="24dp" android:layout_height="24dp"
+                android:src="@drawable/ic_calendar_check" android:tint="@color/nav_inactive"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="EVENTS" android:textSize="10sp" android:textColor="@color/nav_inactive"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/btnNavTickets" android:layout_width="0dp"
+            android:layout_height="match_parent" android:layout_weight="1"
+            android:orientation="vertical" android:gravity="center">
+            <ImageView android:layout_width="24dp" android:layout_height="24dp"
+                android:src="@drawable/ic_ticket" android:tint="@color/primary_dark"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="MY TICKETS" android:textSize="10sp" android:textColor="@color/primary_dark"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/btnNavProfile" android:layout_width="0dp"
+            android:layout_height="match_parent" android:layout_weight="1"
+            android:orientation="vertical" android:gravity="center">
+            <ImageView android:layout_width="24dp" android:layout_height="24dp"
+                android:src="@drawable/ic_person" android:tint="@color/nav_inactive"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="PROFILE" android:textSize="10sp" android:textColor="@color/nav_inactive"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Toolbar -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="56dp"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:paddingStart="16dp" android:paddingEnd="16dp">
+            <ImageView android:id="@+id/iv_back" android:layout_width="24dp" android:layout_height="24dp"
+                android:src="@drawable/ic_arrow_back" android:tint="@color/text_primary"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="EVENT DETAILS" android:textSize="14sp"
+                android:textStyle="bold" android:textColor="@color/text_primary" android:gravity="center"/>
+            <View android:layout_width="24dp" android:layout_height="24dp"/>
+        </LinearLayout>
+
+        <!-- Banner placeholder -->
+        <View android:layout_width="match_parent" android:layout_height="180dp"
+            android:background="@color/primary"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="20dp">
+
+            <TextView android:id="@+id/tv_event_title" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textSize="24sp"
+                android:textStyle="bold" android:textColor="@color/text_primary"
+                android:text="Event Title"/>
+
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:layout_marginTop="6dp">
+                <ImageView android:layout_width="16dp" android:layout_height="16dp"
+                    android:src="@drawable/ic_school" android:tint="@color/text_secondary"/>
+                <TextView android:id="@+id/tv_institution" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textSize="13sp"
+                    android:textColor="@color/text_secondary" android:layout_marginStart="6dp"
+                    android:text="Institution"/>
+            </LinearLayout>
+
+            <!-- Info grid -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginTop="16dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical"
+                    android:background="@drawable/info_card_bg" android:padding="12dp"
+                    android:layout_marginEnd="8dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="DATE" android:textSize="10sp" android:textColor="@color/text_secondary"
+                        android:textStyle="bold"/>
+                    <TextView android:id="@+id/tv_date" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:textSize="13sp"
+                        android:textStyle="bold" android:textColor="@color/text_primary"
+                        android:layout_marginTop="4dp" android:text="Oct 24, 2023"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical"
+                    android:background="@drawable/info_card_bg" android:padding="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="TIME" android:textSize="10sp" android:textColor="@color/text_secondary"
+                        android:textStyle="bold"/>
+                    <TextView android:id="@+id/tv_time" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:textSize="13sp"
+                        android:textStyle="bold" android:textColor="@color/text_primary"
+                        android:layout_marginTop="4dp" android:text="2:00 PM"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginTop="8dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical"
+                    android:background="@drawable/info_card_bg" android:padding="12dp"
+                    android:layout_marginEnd="8dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="TYPE" android:textSize="10sp" android:textColor="@color/text_secondary"
+                        android:textStyle="bold"/>
+                    <TextView android:id="@+id/tv_type" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:textSize="13sp"
+                        android:textStyle="bold" android:textColor="@color/text_primary"
+                        android:layout_marginTop="4dp" android:text="Individual Event"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical"
+                    android:background="@drawable/info_card_bg" android:padding="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="CATEGORY" android:textSize="10sp" android:textColor="@color/text_secondary"
+                        android:textStyle="bold"/>
+                    <TextView android:id="@+id/tv_category" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:textSize="13sp"
+                        android:textStyle="bold" android:textColor="@color/text_primary"
+                        android:layout_marginTop="4dp" android:text="Academic"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="About this Event" android:textSize="16sp"
+                android:textStyle="bold" android:textColor="@color/text_primary"
+                android:layout_marginTop="20dp"/>
+            <TextView android:id="@+id/tv_description" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:textSize="13sp"
+                android:textColor="@color/text_secondary" android:layout_marginTop="6dp"
+                android:lineSpacingMultiplier="1.5"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Venue" android:textSize="16sp"
+                android:textStyle="bold" android:textColor="@color/text_primary"
+                android:layout_marginTop="20dp"/>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:layout_marginTop="6dp">
+                <ImageView android:layout_width="18dp" android:layout_height="18dp"
+                    android:src="@drawable/ic_location" android:tint="@color/text_primary"/>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:layout_marginStart="8dp">
+                    <TextView android:id="@+id/tv_venue" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:textSize="14sp"
+                        android:textStyle="bold" android:textColor="@color/text_primary"/>
+                    <TextView android:id="@+id/tv_venue_sub" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:textSize="12sp"
+                        android:textColor="@color/text_secondary"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Event Coordinators" android:textSize="16sp"
+                android:textStyle="bold" android:textColor="@color/text_primary"
+                android:layout_marginTop="20dp"/>
+            <TextView android:id="@+id/tv_coordinators" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:textSize="13sp"
+                android:textColor="@color/text_secondary" android:layout_marginTop="6dp"/>
+
+        </LinearLayout>
+
+        <!-- Register button -->
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/btn_primary"
+            android:text="Register for Event  →"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+</ScrollView>

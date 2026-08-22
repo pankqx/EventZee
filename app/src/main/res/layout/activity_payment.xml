@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light"
+    android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="20dp">
+
+        <!-- Toolbar -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+            <ImageView android:id="@+id/iv_back" android:layout_width="24dp" android:layout_height="24dp"
+                android:src="@drawable/ic_arrow_back" android:tint="@color/text_primary"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="Checkout" android:textSize="18sp"
+                android:textStyle="bold" android:textColor="@color/text_primary" android:gravity="center"/>
+        </LinearLayout>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Complete Payment" android:textSize="24sp" android:textStyle="bold"
+            android:textColor="@color/text_primary" android:layout_marginTop="20dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Finalize your registration by uploading your payment proof."
+            android:textSize="13sp" android:textColor="@color/text_secondary" android:layout_marginTop="4dp"/>
+
+        <!-- Event Details card -->
+        <androidx.cardview.widget.CardView android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="20dp"
+            app:cardCornerRadius="12dp" app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/background">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="EVENT DETAILS" android:textSize="10sp"
+                            android:textStyle="bold" android:textColor="@color/text_secondary"/>
+                        <TextView android:id="@+id/tv_event_title" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:textSize="16sp"
+                            android:textStyle="bold" android:textColor="@color/text_primary"
+                            android:layout_marginTop="4dp"/>
+                        <TextView android:id="@+id/tv_venue" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:textSize="12sp"
+                            android:textColor="@color/text_secondary"/>
+                    </LinearLayout>
+                    <ImageView android:layout_width="44dp" android:layout_height="44dp"
+                        android:src="@drawable/ic_event_logo"
+                        android:background="@drawable/icon_bg_orange"
+                        android:padding="10dp" android:tint="@color/white"/>
+                </LinearLayout>
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:background="@color/divider" android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Amount to Pay"
+                        android:textSize="14sp" android:textColor="@color/text_primary"/>
+                    <TextView android:id="@+id/tv_amount" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:textSize="22sp"
+                        android:textStyle="bold" android:textColor="@color/accent_orange"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- UPI Section -->
+        <androidx.cardview.widget.CardView android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="16dp"
+            app:cardCornerRadius="12dp" app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/background">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="PAY VIA UPI" android:textSize="11sp"
+                    android:textStyle="bold" android:textColor="@color/text_secondary"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="52dp"
+                    android:background="@drawable/bg_input_rounded" android:layout_marginTop="10dp"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingStart="14dp" android:paddingEnd="14dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="UPI ID" android:textSize="10sp" android:textColor="@color/text_secondary"/>
+                        <TextView android:id="@+id/tv_upi_id" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:textSize="14sp"
+                            android:textStyle="bold" android:textColor="@color/text_primary"
+                            android:fontFamily="monospace"/>
+                    </LinearLayout>
+                    <TextView android:id="@+id/tv_copy_upi" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="Copy"
+                        android:textSize="13sp" android:textStyle="bold"
+                        android:textColor="@color/accent_orange"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Upload section -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Upload Payment Screenshot" android:textSize="15sp"
+            android:textStyle="bold" android:textColor="@color/text_primary"
+            android:layout_marginTop="20dp"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="100dp"
+            android:orientation="vertical" android:gravity="center"
+            android:background="@drawable/bg_dashed_border" android:layout_marginTop="8dp">
+            <ImageView android:layout_width="32dp" android:layout_height="32dp"
+                android:src="@drawable/ic_upload" android:tint="@color/text_secondary"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Tap to upload proof" android:textSize="13sp"
+                android:textColor="@color/text_primary" android:layout_marginTop="8dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="PNG, JPG or PDF (Max 5MB)" android:textSize="11sp"
+                android:textColor="@color/text_secondary"/>
+        </LinearLayout>
+
+        <Button android:id="@+id/btn_submit_payment"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/btn_primary"
+            android:text="Submit Payment  →"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="20dp">
+
+        <!-- Toolbar -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+            <ImageView android:id="@+id/iv_back" android:layout_width="24dp" android:layout_height="24dp"
+                android:src="@drawable/ic_arrow_back" android:tint="@color/text_primary"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="Registration" android:textSize="18sp"
+                android:textStyle="bold" android:textColor="@color/text_primary" android:gravity="center"/>
+        </LinearLayout>
+
+        <!-- Step indicator -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginTop="20dp">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="Step 1 of 2"
+                android:textSize="13sp" android:textStyle="bold" android:textColor="@color/text_primary"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="IN PROGRESS" android:textSize="11sp"
+                android:textColor="@color/text_secondary" android:textStyle="bold"/>
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="4dp"
+            android:background="@drawable/progress_bar_bg" android:layout_marginTop="6dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Personal &amp; Academic Details" android:textSize="12sp"
+            android:textColor="@color/text_secondary" android:layout_marginTop="6dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Student Information" android:textSize="22sp"
+            android:textStyle="bold" android:textColor="@color/text_primary"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Form fields -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Full Name" android:textSize="13sp" android:textColor="@color/text_primary"
+            android:textStyle="bold" android:layout_marginTop="20dp"/>
+        <EditText android:id="@+id/et_name" android:layout_width="match_parent"
+            android:layout_height="52dp" android:layout_marginTop="6dp"
+            android:background="@drawable/bg_input_rounded"
+            android:paddingStart="14dp" android:paddingEnd="14dp"
+            android:hint="John Doe" android:textSize="14sp" android:textColorHint="@color/text_hint"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Email Address" android:textSize="13sp" android:textColor="@color/text_primary"
+            android:textStyle="bold" android:layout_marginTop="14dp"/>
+        <EditText android:id="@+id/et_email" android:layout_width="match_parent"
+            android:layout_height="52dp" android:layout_marginTop="6dp"
+            android:background="@drawable/bg_input_rounded"
+            android:paddingStart="14dp" android:paddingEnd="14dp"
+            android:hint="john@university.edu" android:inputType="textEmailAddress"
+            android:textSize="14sp" android:textColorHint="@color/text_hint"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Phone Number" android:textSize="13sp" android:textColor="@color/text_primary"
+            android:textStyle="bold" android:layout_marginTop="14dp"/>
+        <EditText android:id="@+id/et_phone" android:layout_width="match_parent"
+            android:layout_height="52dp" android:layout_marginTop="6dp"
+            android:background="@drawable/bg_input_rounded"
+            android:paddingStart="14dp" android:paddingEnd="14dp"
+            android:hint="+1 (555) 000-0000" android:inputType="phone"
+            android:textSize="14sp" android:textColorHint="@color/text_hint"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="USN / Student ID" android:textSize="13sp" android:textColor="@color/text_primary"
+            android:textStyle="bold" android:layout_marginTop="14dp"/>
+        <EditText android:id="@+id/et_usn" android:layout_width="match_parent"
+            android:layout_height="52dp" android:layout_marginTop="6dp"
+            android:background="@drawable/bg_input_rounded"
+            android:paddingStart="14dp" android:paddingEnd="14dp"
+            android:hint="1XY20CS001" android:textSize="14sp" android:textColorHint="@color/text_hint"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Department" android:textSize="13sp" android:textColor="@color/text_primary"
+            android:textStyle="bold" android:layout_marginTop="14dp"/>
+        <Spinner android:id="@+id/spinner_dept" android:layout_width="match_parent"
+            android:layout_height="52dp" android:layout_marginTop="6dp"
+            android:background="@drawable/bg_input_rounded"
+            android:paddingStart="14dp" android:paddingEnd="14dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Team Name (optional)" android:textSize="13sp" android:textColor="@color/text_primary"
+            android:textStyle="bold" android:layout_marginTop="14dp"/>
+        <EditText android:id="@+id/et_team_name" android:layout_width="match_parent"
+            android:layout_height="52dp" android:layout_marginTop="6dp"
+            android:background="@drawable/bg_input_rounded"
+            android:paddingStart="14dp" android:paddingEnd="14dp"
+            android:hint="Enter team name (optional)"
+            android:textSize="14sp" android:textColorHint="@color/text_hint"/>
+
+        <Button android:id="@+id/btn_proceed"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/btn_primary"
+            android:text="Proceed to Checkout  →"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+</ScrollView>

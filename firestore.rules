@@ -1,0 +1,12 @@
+// Starter Firestore security rules for EventZee.
+// NOTE: this project currently does auth checks manually (no Firebase Auth),
+// so these rules are intentionally open for development. Before any real
+// deployment, tighten this once Firebase Authentication is wired in.
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if true; // TODO: replace with real auth checks
+    }
+  }
+}

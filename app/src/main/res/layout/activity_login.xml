@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/white" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="24dp">
+
+        <!-- Logo Row -->
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginTop="40dp" android:layout_marginBottom="32dp">
+            <androidx.cardview.widget.CardView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="36dp" android:layout_height="36dp"
+                app:cardCornerRadius="8dp" app:cardElevation="0dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:background="@color/primary_dark" android:gravity="center">
+                    <ImageView android:layout_width="20dp" android:layout_height="20dp"
+                        android:src="@drawable/ic_calendar_check" android:tint="@color/white"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Event Zee" android:textSize="18sp" android:textStyle="bold"
+                android:textColor="@color/text_primary" android:layout_marginStart="10dp"/>
+        </LinearLayout>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Login" android:textSize="32sp" android:textStyle="bold"
+            android:textColor="@color/text_primary"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Welcome back. Please enter your details."
+            android:textSize="14sp" android:textColor="@color/text_secondary"
+            android:layout_marginTop="4dp" android:layout_marginBottom="28dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Role" android:textSize="14sp" android:textColor="@color/text_primary"
+            android:textStyle="bold" android:layout_marginBottom="8dp"/>
+        <Spinner android:id="@+id/spinnerRole"
+            android:layout_width="match_parent" android:layout_height="52dp"
+            android:background="@drawable/input_border_bg"
+            android:paddingStart="14dp" android:paddingEnd="14dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Email" android:textSize="14sp" android:textColor="@color/text_primary"
+            android:textStyle="bold" android:layout_marginBottom="8dp"/>
+        <EditText android:id="@+id/etEmail"
+            android:layout_width="match_parent" android:layout_height="52dp"
+            android:hint="Enter your email address" android:inputType="textEmailAddress"
+            android:background="@drawable/input_border_bg"
+            android:paddingStart="14dp" android:paddingEnd="14dp"
+            android:textSize="14sp" android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary" android:layout_marginBottom="16dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Password" android:textSize="14sp" android:textColor="@color/text_primary"
+            android:textStyle="bold" android:layout_marginBottom="8dp"/>
+        <FrameLayout android:layout_width="match_parent" android:layout_height="52dp"
+            android:layout_marginBottom="8dp">
+            <EditText android:id="@+id/etPassword"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:hint="Enter your password"
+                android:inputType="textPassword"
+                android:background="@drawable/input_border_bg"
+                android:paddingStart="14dp" android:paddingEnd="52dp"
+                android:textSize="14sp" android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_secondary"/>
+            <ImageView android:id="@+id/ivTogglePassword"
+                android:layout_width="24dp" android:layout_height="24dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="14dp"
+                android:src="@drawable/ic_eye_off" android:tint="@color/text_secondary"/>
+        </FrameLayout>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Forgot Password?" android:textSize="13sp"
+            android:textColor="@color/text_secondary" android:layout_gravity="end"
+            android:layout_marginBottom="24dp"/>
+
+        <ProgressBar android:id="@+id/progressBar"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="center" android:visibility="gone"/>
+
+        <Button android:id="@+id/btnLogin"
+            android:layout_width="match_parent" android:layout_height="54dp"
+            android:text="Login →" android:textSize="16sp" android:textStyle="bold"
+            android:textColor="@color/white" android:background="@drawable/btn_primary"
+            android:layout_marginBottom="20dp"/>
+
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_gravity="center">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="New to Event Zee? " android:textSize="14sp"
+                android:textColor="@color/text_secondary"/>
+            <TextView android:id="@+id/tvRegister"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Register" android:textSize="14sp"
+                android:textColor="@color/primary_dark" android:textStyle="bold"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

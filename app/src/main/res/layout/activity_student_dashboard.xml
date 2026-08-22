@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/white">
+
+    <!-- Header -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:padding="20dp" android:paddingTop="24dp">
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="Events" android:textSize="28sp"
+            android:textStyle="bold" android:textColor="@color/text_primary"/>
+        <ImageView android:layout_width="40dp" android:layout_height="40dp"
+            android:src="@drawable/ic_profile_placeholder" android:scaleType="centerCrop"
+            android:background="@drawable/circle_bg" android:padding="2dp"/>
+    </LinearLayout>
+
+    <!-- Search -->
+    <FrameLayout android:layout_width="match_parent" android:layout_height="48dp"
+        android:marginStart="20dp" android:marginEnd="20dp" android:layout_marginBottom="16dp">
+        <EditText android:id="@+id/etSearch"
+            android:layout_width="match_parent" android:layout_height="match_parent"
+            android:hint="Search by name, date, or venue..."
+            android:background="@drawable/search_bg"
+            android:paddingStart="44dp" android:paddingEnd="14dp"
+            android:textSize="14sp" android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary" android:singleLine="true"/>
+        <ImageView android:layout_width="20dp" android:layout_height="20dp"
+            android:layout_gravity="start|center_vertical" android:layout_marginStart="14dp"
+            android:src="@drawable/ic_search" android:tint="@color/text_secondary"/>
+    </FrameLayout>
+
+    <!-- Category chips -->
+    <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:scrollbars="none" android:paddingStart="20dp" android:layout_marginBottom="16dp">
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical">
+            <TextView android:id="@+id/chipAll" android:layout_width="wrap_content"
+                android:layout_height="36dp" android:text="All Events" android:textSize="13sp"
+                android:gravity="center" android:paddingStart="16dp" android:paddingEnd="16dp"
+                android:background="@drawable/chip_selected" android:textColor="@color/white"
+                android:layout_marginEnd="8dp"/>
+            <TextView android:id="@+id/chipAcademic" android:layout_width="wrap_content"
+                android:layout_height="36dp" android:text="Academic" android:textSize="13sp"
+                android:gravity="center" android:paddingStart="16dp" android:paddingEnd="16dp"
+                android:background="@drawable/chip_unselected" android:textColor="@color/text_secondary"
+                android:layout_marginEnd="8dp"/>
+            <TextView android:id="@+id/chipSocial" android:layout_width="wrap_content"
+                android:layout_height="36dp" android:text="Social" android:textSize="13sp"
+                android:gravity="center" android:paddingStart="16dp" android:paddingEnd="16dp"
+                android:background="@drawable/chip_unselected" android:textColor="@color/text_secondary"
+                android:layout_marginEnd="8dp"/>
+            <TextView android:id="@+id/chipSports" android:layout_width="wrap_content"
+                android:layout_height="36dp" android:text="Sports" android:textSize="13sp"
+                android:gravity="center" android:paddingStart="16dp" android:paddingEnd="16dp"
+                android:background="@drawable/chip_unselected" android:textColor="@color/text_secondary"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Events list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvEvents" android:layout_width="match_parent"
+        android:layout_height="0dp" android:layout_weight="1"
+        android:paddingStart="20dp" android:paddingEnd="20dp"/>
+
+    <!-- Bottom Nav -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="64dp"
+        android:orientation="horizontal" android:background="@color/white"
+        android:elevation="8dp">
+        <LinearLayout android:id="@+id/btnNavEvents" android:layout_width="0dp"
+            android:layout_height="match_parent" android:layout_weight="1"
+            android:orientation="vertical" android:gravity="center">
+            <ImageView android:layout_width="24dp" android:layout_height="24dp"
+                android:src="@drawable/ic_calendar_check" android:tint="@color/primary_dark"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Events" android:textSize="11sp" android:textColor="@color/primary_dark"
+                android:textStyle="bold"/>
+            <View android:layout_width="4dp" android:layout_height="4dp"
+                android:background="@drawable/nav_dot" android:layout_marginTop="2dp"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/btnNavTickets" android:layout_width="0dp"
+            android:layout_height="match_parent" android:layout_weight="1"
+            android:orientation="vertical" android:gravity="center">
+            <ImageView android:layout_width="24dp" android:layout_height="24dp"
+                android:src="@drawable/ic_ticket" android:tint="@color/nav_inactive"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="My Tickets" android:textSize="11sp" android:textColor="@color/nav_inactive"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/btnNavProfile" android:layout_width="0dp"
+            android:layout_height="match_parent" android:layout_weight="1"
+            android:orientation="vertical" android:gravity="center">
+            <ImageView android:layout_width="24dp" android:layout_height="24dp"
+                android:src="@drawable/ic_person" android:tint="@color/nav_inactive"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Profile" android:textSize="11sp" android:textColor="@color/nav_inactive"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

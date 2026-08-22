@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Toolbar -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="56dp"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:paddingStart="16dp" android:paddingEnd="16dp">
+            <ImageView android:layout_width="24dp" android:layout_height="24dp"
+                android:src="@drawable/ic_arrow_back" android:tint="@color/text_primary"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="Profile" android:textSize="18sp"
+                android:textStyle="bold" android:textColor="@color/text_primary" android:gravity="center"/>
+            <View android:layout_width="24dp" android:layout_height="24dp"/>
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp"
+            android:background="@color/divider"/>
+
+        <!-- Profile photo -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:gravity="center" android:paddingTop="24dp"
+            android:paddingBottom="16dp">
+            <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/iv_profile_photo"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_profile_avatar"
+                    android:background="@drawable/profile_photo_bg"
+                    android:scaleType="centerCrop"/>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="28dp" android:layout_height="28dp"
+                    android:layout_gravity="bottom|end"
+                    app:cardCornerRadius="14dp"
+                    app:cardBackgroundColor="@color/primary">
+                    <ImageView android:layout_width="16dp" android:layout_height="16dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_camera" android:tint="@color/white"/>
+                </androidx.cardview.widget.CardView>
+            </FrameLayout>
+
+            <TextView android:id="@+id/tv_name" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textSize="22sp"
+                android:textStyle="bold" android:textColor="@color/text_primary"
+                android:layout_marginTop="12dp"/>
+            <TextView android:id="@+id/tv_usn" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textSize="13sp"
+                android:textColor="@color/text_secondary" android:layout_marginTop="4dp"/>
+            <TextView android:id="@+id/tv_dept" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textSize="12sp"
+                android:textStyle="bold" android:textColor="@color/text_primary"
+                android:background="@drawable/dept_badge_bg"
+                android:paddingStart="12dp" android:paddingEnd="12dp"
+                android:paddingTop="4dp" android:paddingBottom="4dp"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+
+        <!-- Info fields -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:paddingStart="20dp" android:paddingEnd="20dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="EMAIL ADDRESS" android:textSize="10sp"
+                android:textStyle="bold" android:textColor="@color/text_secondary"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:paddingTop="8dp" android:paddingBottom="16dp">
+                <TextView android:id="@+id/tv_email" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:layout_weight="1"
+                    android:textSize="15sp" android:textColor="@color/text_primary"/>
+                <ImageView android:layout_width="18dp" android:layout_height="18dp"
+                    android:src="@drawable/ic_mail" android:tint="@color/text_secondary"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent" android:layout_height="1dp"
+                android:background="@color/divider"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="PHONE NUMBER" android:textSize="10sp"
+                android:textStyle="bold" android:textColor="@color/text_secondary"
+                android:layout_marginTop="16dp"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:paddingTop="8dp" android:paddingBottom="16dp">
+                <TextView android:id="@+id/tv_phone" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:layout_weight="1"
+                    android:textSize="15sp" android:textColor="@color/text_primary"/>
+                <ImageView android:layout_width="18dp" android:layout_height="18dp"
+                    android:src="@drawable/ic_phone" android:tint="@color/text_secondary"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent" android:layout_height="1dp"
+                android:background="@color/divider"/>
+        </LinearLayout>
+
+        <!-- Action rows -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="20dp">
+
+            <LinearLayout android:id="@+id/row_edit_profile"
+                android:layout_width="match_parent" android:layout_height="52dp"
+                android:background="@drawable/action_row_bg"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:paddingStart="16dp" android:paddingEnd="16dp"
+                android:layout_marginBottom="10dp">
+                <ImageView android:layout_width="20dp" android:layout_height="20dp"
+                    android:src="@drawable/ic_edit" android:tint="@color/text_primary"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Edit Profile"
+                    android:textSize="15sp" android:textColor="@color/text_primary"
+                    android:layout_marginStart="12dp"/>
+                <ImageView android:layout_width="16dp" android:layout_height="16dp"
+                    android:src="@drawable/ic_arrow_right" android:tint="@color/text_secondary"/>
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/row_change_password"
+                android:layout_width="match_parent" android:layout_height="52dp"
+                android:background="@drawable/action_row_bg"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:paddingStart="16dp" android:paddingEnd="16dp">
+                <ImageView android:layout_width="20dp" android:layout_height="20dp"
+                    android:src="@drawable/ic_lock" android:tint="@color/text_primary"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Change Password"
+                    android:textSize="15sp" android:textColor="@color/text_primary"
+                    android:layout_marginStart="12dp"/>
+                <ImageView android:layout_width="16dp" android:layout_height="16dp"
+                    android:src="@drawable/ic_arrow_right" android:tint="@color/text_secondary"/>
+            </LinearLayout>
+
+            <Button android:id="@+id/btn_logout"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_primary"
+                android:text="⇥  Logout Account"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

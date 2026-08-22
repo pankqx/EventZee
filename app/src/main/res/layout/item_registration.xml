@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="52dp"
+        android:orientation="horizontal" android:gravity="center_vertical">
+        <TextView android:id="@+id/tv_name" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="3"
+            android:textSize="14sp" android:textStyle="bold" android:textColor="@color/text_primary"/>
+        <TextView android:id="@+id/tv_usn" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="3"
+            android:textSize="12sp" android:textColor="@color/text_secondary"/>
+        <TextView android:id="@+id/tv_status" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="2"
+            android:textSize="10sp" android:textStyle="bold"
+            android:paddingStart="8dp" android:paddingEnd="8dp"
+            android:paddingTop="4dp" android:paddingBottom="4dp"
+            android:gravity="center" android:background="@drawable/bg_status_paid"/>
+        <ImageView android:layout_width="0dp" android:layout_height="20dp"
+            android:layout_weight="1" android:src="@drawable/ic_message"
+            android:tint="#27AE60"/>
+    </LinearLayout>
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider"/>
+</LinearLayout>

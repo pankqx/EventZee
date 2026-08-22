@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@color/background">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="14dp">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical">
+            <View android:layout_width="72dp" android:layout_height="72dp"
+                android:background="@color/background_light" android:layout_marginEnd="12dp"/>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView android:id="@+id/tv_status" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textSize="10sp"
+                    android:textStyle="bold" android:paddingStart="8dp" android:paddingEnd="8dp"
+                    android:paddingTop="3dp" android:paddingBottom="3dp"
+                    android:background="@drawable/badge_confirmed"/>
+                <TextView android:id="@+id/tv_event_title" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textSize="15sp"
+                    android:textStyle="bold" android:textColor="@color/text_primary"
+                    android:layout_marginTop="4dp"/>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:layout_marginTop="3dp">
+                    <ImageView android:layout_width="12dp" android:layout_height="12dp"
+                        android:src="@drawable/ic_calendar" android:tint="@color/text_secondary"/>
+                    <TextView android:id="@+id/tv_date_time" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:textSize="11sp"
+                        android:textColor="@color/text_secondary" android:layout_marginStart="4dp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:layout_marginTop="2dp">
+                    <ImageView android:layout_width="12dp" android:layout_height="12dp"
+                        android:src="@drawable/ic_location" android:tint="@color/text_secondary"/>
+                    <TextView android:id="@+id/tv_venue" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:textSize="11sp"
+                        android:textColor="@color/text_secondary" android:layout_marginStart="4dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View android:layout_width="match_parent" android:layout_height="1dp"
+            android:background="@color/divider" android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical">
+            <TextView android:id="@+id/tv_seat_info" android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_weight="1"
+                android:textSize="13sp" android:textColor="@color/text_secondary"/>
+            <TextView android:id="@+id/tv_action_required" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="Action Required"
+                android:textSize="12sp" android:textColor="@color/status_pending_text"
+                android:textStyle="bold" android:visibility="gone"
+                android:layout_marginEnd="8dp"/>
+            <Button android:id="@+id/btn_view_ticket" android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="VIEW TICKET"
+                android:textSize="11sp" android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_primary"
+                android:paddingStart="14dp" android:paddingEnd="14dp"/>
+            <Button android:id="@+id/btn_complete_payment" android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="COMPLETE PAYMENT"
+                android:textSize="11sp" android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:background="@drawable/btn_outline"
+                android:paddingStart="14dp" android:paddingEnd="14dp"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
